@@ -1,5 +1,9 @@
+from .core.config import Settings
+
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
+
+S = Settings()
 
 class Product(BaseModel):
     price: int = Field(ge=10, le=20)
