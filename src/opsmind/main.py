@@ -14,3 +14,7 @@ def hy():
 @app.post("/", status_code=201)
 def ingesting(product: Product):
     return {'product_name': product.name, 'product_price': product.price}
+
+@app.get("/api/v1/health")
+def health_metric():
+    return {'status': 'ok'}
