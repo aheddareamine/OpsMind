@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:16-alpine
+    container_name: postgres_opsmind
     environment:
       POSTGRES_USER: opsmind_user
       POSTGRES_PASSWORD: opsmind_password
@@ -8,7 +9,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
-    - "5432:9876"
+    - "5432:5432"
 
 volumes:
   postgres_data:

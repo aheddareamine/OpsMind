@@ -10,7 +10,7 @@ engine = create_engine(
     max_overflow=10
 )
 
-SessionLocal = sessionmaker(autoflush=False, autocomit=False, bind=engine)
+SessionLocal = sessionmaker(autoflush=False, autocommit=False, bind=engine)
 
 def get_db():
     db = SessionLocal()
