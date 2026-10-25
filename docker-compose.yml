@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: opsmind_user
+      POSTGRES_PASSWORD: opsmind_password
+      POSTGRES_DB: opsmind_main_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+    - "5432:9876"
+
+volumes:
+  postgres_data:
