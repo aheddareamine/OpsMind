@@ -12,9 +12,10 @@ class User(Base):
     __tablename__ = "users"
 
     id : Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    address : Mapped[str |None] 
     email : Mapped[str] = mapped_column(index=True, unique=True)
     username : Mapped[str]
     age : Mapped[int]
     hashed_password : Mapped[str]
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
