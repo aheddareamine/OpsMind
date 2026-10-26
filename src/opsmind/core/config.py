@@ -3,8 +3,11 @@ from functools import lru_cache
 
 
 class Settings(BaseSettings):
-    database_url : str 
-    
+    database_url : str
+    secret_key : str
+    access_token_expire_minutes : int
+    algorithm : str
+
     model_config = SettingsConfigDict(
         env_file="/home/ouimaison/Desktop/Web/FastAPI/OpsMind/.env",
         env_file_encoding="utf-8",
