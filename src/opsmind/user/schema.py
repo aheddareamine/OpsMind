@@ -4,7 +4,6 @@ from pydantic import BaseModel, EmailStr, ConfigDict
 class User(BaseModel):
     email : EmailStr
     username : str
-    age : int
 
 
 class UserCreate(User):
