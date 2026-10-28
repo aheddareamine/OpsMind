@@ -11,5 +11,12 @@ services:
     ports:
     - "5432:5432"
 
+# upcoming..
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: redis_opsmind
+  #   ports:
+  #   - "6379:6379"
+
 volumes:
   postgres_data:
