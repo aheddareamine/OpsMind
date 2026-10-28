@@ -4,7 +4,7 @@ from sqlalchemy import Select
 from pydantic import EmailStr
 
 from opsmind.core.db import get_db
-from opsmind.user.schema import UserResponse, UserCreate
+from opsmind.user.schema import UserCreate
 from opsmind.user.model import User
 from opsmind.user.auth import auth_router
 

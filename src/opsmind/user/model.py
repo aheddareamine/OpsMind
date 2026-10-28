@@ -13,7 +13,8 @@ class User(Base):
 
     id : Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     email : Mapped[str] = mapped_column(index=True, unique=True)
-    username : Mapped[str]
+    username : Mapped[str] = mapped_column(unique=True)
+    is_admin : Mapped[bool]
     hashed_password : Mapped[str]
 
 # Base.metadata.create_all(bind=engine)
